@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Bus_Location_Activity"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <Spinner
+            android:id="@+id/spinner_wilaya3"
+            android:layout_width="145dp"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/tvplan"
+            android:layout_marginEnd="20dp" />
+
+        <TextView
+
+            android:id="@+id/tvplan"
+            android:layout_width="152dp"
+            android:layout_height="30dp"
+
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="38dp"
+            android:text="Select Wilaya"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <TextView
+            android:id="@+id/ttV2"
+            android:layout_width="156dp"
+            android:layout_height="30dp"
+
+            android:layout_alignEnd="@+id/tvplan"
+            android:layout_alignTop="@+id/spinner_bus2"
+            android:text="Select bus"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <Spinner
+            android:id="@+id/spinner_bus2"
+            android:layout_width="140dp"
+            android:layout_height="30dp"
+            android:layout_above="@+id/button2"
+            android:layout_alignEnd="@+id/spinner_wilaya3"
+            android:layout_marginBottom="55dp" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="206dp"
+            android:layout_height="28dp"
+            android:layout_alignBottom="@+id/button3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="49dp"
+            android:background="#1e90ff"
+            android:onClick="onButtonClickedFindLocation"
+            android:text="Find bus stops Location"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="206dp"
+            android:layout_height="28dp"
+
+
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button2"
+            android:layout_marginBottom="27dp"
+            android:background="#1e90ff"
+            android:onClick="showmap"
+            android:text="View in Map"
+            android:textAllCaps="false"
+            android:textColor="#ffffff" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="305dp"
+            android:layout_height="117dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="61dp"
+            app:srcCompat="@drawable/bustracker" />
+
+
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+
+        app:menu="@menu/activity_main_drawer" >
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+    </android.support.design.widget.NavigationView>
+
+
+
+
+</android.support.v4.widget.DrawerLayout>

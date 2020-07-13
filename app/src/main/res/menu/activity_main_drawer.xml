@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/transport_status"
+            android:icon="@mipmap/info"
+            android:title="Transport Map" />
+        <item
+            android:id="@+id/bus_selection"
+            android:title="Find bus location"
+            android:icon="@mipmap/ic_directions_bus_black_24dp" />
+
+        <item
+            android:id="@+id/nearby_stops"
+            android:icon="@drawable/busstop"
+            android:title="Nearby stops" />
+
+    </group>
+
+    <item android:title="other">
+        <menu>
+            <item
+                android:id="@+id/close"
+                android:icon="@drawable/ic_menu_send"
+                android:title="exit" />
+        </menu>
+    </item>
+
+</menu>

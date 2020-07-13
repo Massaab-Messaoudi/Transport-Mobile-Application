@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NearbyStopActivity"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include
+            layout="@layout/app_bar_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true" />
+
+        <Spinner
+            android:id="@+id/nearby_wilaya"
+            android:layout_width="145dp"
+
+            android:layout_height="35dp"
+
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/imageView4"
+            android:layout_marginEnd="13dp" />
+
+        <TextView
+
+            android:id="@+id/tvplan_nearby"
+            android:layout_width="152dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/select_nearby"
+            android:layout_marginBottom="32dp"
+            android:layout_marginEnd="18dp"
+            android:layout_toStartOf="@+id/nearby_bus"
+            android:text="Select Wilaya"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+
+
+        <TextView
+            android:id="@+id/select_nearby"
+            android:layout_width="154dp"
+            android:layout_height="39dp"
+            android:layout_alignBottom="@+id/nearby_bus"
+            android:layout_alignEnd="@+id/tvplan_nearby"
+            android:text="Select bus"
+            android:textSize="25dp"
+            android:textStyle="italic" />
+
+        <Spinner
+            android:id="@+id/nearby_bus"
+            android:layout_width="148dp"
+            android:layout_height="36dp"
+            android:layout_above="@+id/nearby_finder"
+            android:layout_alignStart="@+id/nearby_wilaya"
+            android:layout_marginBottom="16dp" />
+
+
+
+        <Button
+            android:id="@+id/nearby_finder"
+            android:layout_width="191dp"
+            android:layout_height="28dp"
+            android:layout_above="@+id/nearby_button"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="12dp"
+            android:background="#1e90ff"
+            android:onClick="download_stop_location"
+            android:text="find the nearby stop"
+            android:textColor="#ffffff"
+            android:textAllCaps="false"
+            />
+
+        <Button
+            android:id="@+id/nearby_button"
+            android:layout_width="191dp"
+            android:layout_height="28dp"
+            android:background="#1e90ff"
+            android:textColor="#ffffff"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="19dp"
+            android:onClick="show_nearby_stop"
+            android:text="Show nearby stop"
+            android:textAllCaps="false"
+            />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/tvplan_nearby"
+            android:layout_alignParentStart="true"
+            app:srcCompat="@drawable/bus_infor" />
+
+
+    </RelativeLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_main"
+
+        app:menu="@menu/activity_main_drawer" />
+
+
+
+
+</android.support.v4.widget.DrawerLayout>
